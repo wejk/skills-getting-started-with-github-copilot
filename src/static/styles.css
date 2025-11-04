@@ -102,22 +102,28 @@ section h3 {
 
 .participants-list li {
   position: relative;
-  padding-left: 18px;
+  padding-right: 24px;
   margin-bottom: 6px;
   color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* small colored dot */
-.participants-list li::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #1a237e;
-  display: inline-block;
+.delete-participant {
+  cursor: pointer;
+  color: #c62828;
+  font-size: 18px;
   position: absolute;
-  left: 0;
-  top: 6px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.delete-participant:hover {
+  opacity: 1;
 }
 
 /* empty state styling */
